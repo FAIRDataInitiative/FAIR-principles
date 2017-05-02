@@ -1,0 +1,186 @@
+@prefix this: <http://semanticscience.org/np/fair/np.RA3x_zV26yau-OrjjEYuHyEwBWPDiyKCiWO34V1Xe4GTw> .
+@prefix sub: <http://semanticscience.org/np/fair/np.RA3x_zV26yau-OrjjEYuHyEwBWPDiyKCiWO34V1Xe4GTw#> .
+@prefix : <http://semanticscience.org/np/fair/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <https://www.w3.org/2002/07/owl#> .
+
+sub:head {
+	sub:ag a np:Assertion .
+	
+	sub:ig a np:PublicationInfo .
+	
+	sub:pg a np:Provenance .
+	
+	this: np:hasAssertion sub:ag ;
+		np:hasProvenance sub:pg ;
+		np:hasPublicationInfo sub:ig ;
+		a np:Nanopublication .
+}
+
+sub:ag {
+	:A dct:hasPart :A1 , :A2 ;
+		dct:title "Accesible"@en ;
+		a :FAIR-Aspect .
+	
+	:A1 dct:description "(meta)data are retrievable by their identifier using a standardized communications protocol"@en ;
+		dct:hasPart :A1.1 , :A1.2 ;
+		dct:title "A1"@en ;
+		a :FAIR-Principle .
+	
+	:A1.1 dct:description "the protocol is open, free, and universally implementable"@en ;
+		dct:title "A1.1"@en ;
+		a :FAIR-Principle .
+	
+	:A1.2 dct:description "the protocol allows for an authentication and authorization procedure, where necessary"@en ;
+		dct:title "A1.2"@en ;
+		a :FAIR-Principle .
+	
+	:A2 dct:description "metadata are accessible, even when the data are no longer available"@en ;
+		dct:title "A2"@en ;
+		a :FAIR-Principle .
+	
+	:F dct:hasPart :F1 , :F2 , :F3 , :F4 ;
+		dct:title "Findable"@en ;
+		a :FAIR-Aspect .
+	
+	:F1 dct:description "(meta)data are assigned a globally unique and persistent identifier"@en ;
+		dct:title "F1"@en ;
+		a :FAIR-Principle .
+	
+	:F2 dct:description "data are described with rich metadata (defined by R1 below)"@en ;
+		dct:title "F2"@en ;
+		a :FAIR-Principle .
+	
+	:F3 dct:description "metadata clearly and explicitly include the identifier of the data it describes"@en ;
+		dct:title "F3"@en ;
+		a :FAIR-Principle .
+	
+	:F4 dct:description "(meta)data are registered or indexed in a searchable resource"@en ;
+		dct:title "F4"@en ;
+		a :FAIR-Principle .
+	
+	:FAIR-Aspect dct:description "A FAIR aspect is one the four aspects that define the FAIR acronym"@en ;
+		dct:title "FAIR Aspect"@en ;
+		a owl:Class ;
+		<http://www.w3.org/2000/01/rdf-schema#subClassOf> sio:SIO:000137 ;
+		owl:oneOf sub:_1 .
+	
+	:FAIR-Principle dct:description "A FAIR principle describes an essential component of a FAIR aspect"@en ;
+		dct:title "FAIR Principle"@en ;
+		a owl:Class ;
+		owl:oneOf sub:_15 .
+	
+	:I dct:hasPart :I1 , :I2 , :I3 ;
+		dct:title "Interoperable"@en ;
+		a :FAIR-Aspect .
+	
+	:I1 dct:description "(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation"@en ;
+		dct:title "I1"@en ;
+		a :FAIR-Principle .
+	
+	:I2 dct:description "(meta)data use vocabularies that follow FAIR principles"@en ;
+		dct:title "I2"@en ;
+		a :FAIR-Principle .
+	
+	:I3 dct:description "(meta)data include qualified references to other (meta)data"@en ;
+		dct:title "I3"@en ;
+		a :FAIR-Principle .
+	
+	:R dct:hasPart :R1 ;
+		dct:title "Reusable"@en ;
+		a :FAIR-Aspect .
+	
+	:R1 dct:description "meta(data) are richly described with a plurality of accurate and relevant attributes"@en ;
+		dct:hasPart :R1.1 , :R1.2 , :R1.3 ;
+		dct:title "R1"@en ;
+		a :FAIR-Principle .
+	
+	:R1.1 dct:description "(meta)data are released with a clear and accessible data usage license"@en ;
+		dct:title "R1.1"@en ;
+		a :FAIR-Principle .
+	
+	:R1.2 dct:description "(meta)data are associated with detailed provenance"@en ;
+		dct:title "R1.2"@en ;
+		a :FAIR-Principle .
+	
+	:R1.3 dct:description "(meta)data meet domain-relevant community standards"@en ;
+		dct:title "R1.3"@en ;
+		a :FAIR-Principle .
+	
+	:fair dct:hasPart :A , :F , :I , :R ;
+		dct:title "FAIR principles"@en ;
+		a owl:Class ;
+		<http://www.w3.org/2000/01/rdf-schema#subClassOf> sio:000090 .
+	
+	sub:_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :F ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_2 .
+	
+	sub:_10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :R1.1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_11 .
+	
+	sub:_11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :R1.2 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_12 .
+	
+	sub:_12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :R1.3 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+	
+	sub:_13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :I ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_14 .
+	
+	sub:_14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :R ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+	
+	sub:_15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :F1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_16 .
+	
+	sub:_16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :F2 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_17 .
+	
+	sub:_17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :F3 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_18 .
+	
+	sub:_18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :F4 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_19 .
+	
+	sub:_19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :A1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_3 .
+	
+	sub:_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :A ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_13 .
+	
+	sub:_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :A1.1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_4 .
+	
+	sub:_4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :A1.2 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_5 .
+	
+	sub:_5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :A2 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_6 .
+	
+	sub:_6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :I1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_7 .
+	
+	sub:_7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :I2 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_8 .
+	
+	sub:_8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :I3 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_9 .
+	
+	sub:_9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> :R1 ;
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> sub:_10 .
+}
+
+sub:pg {
+	sub:ag prov:wasQuotedFrom <https://www.nature.com/articles/sdata201618> .
+}
+
+sub:ig {
+	this: dct:contributor <http://csarven.ca/#i> , <https://orcid.org/0000-0002-1267-0234> , <https://ruben.verborgh.org/profile/#me> ;
+		dct:created "2017-05-01T15:42:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+		dct:creator <http://orcid.org/0000-0003-4727-9435> ;
+		dct:rights <http://creativecommons.org/licenses/by/4.0/> ;
+		dct:title "Nanopublication containing the FAIR principles"@en .
+}
