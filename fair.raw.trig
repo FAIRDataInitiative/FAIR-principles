@@ -1,5 +1,5 @@
-@prefix : <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/> .
-@prefix p: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/> .
+@prefix : <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#> .
+@prefix p: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -10,15 +10,15 @@
 :head {
   p: 
     a np:Nanopublication;
-	np:hasAssertion :ag;
-	np:hasProvenance :pg;
-	np:hasPublicationInfo :ig .
-  :ig a np:PublicationInfo .
-  :ag a np:Assertion .
-  :pg a np:Provenance .
+	np:hasAssertion p:ag;
+	np:hasProvenance p:pg;
+	np:hasPublicationInfo p:ig .
+  p:ig a np:PublicationInfo .
+  p:ag a np:Assertion .
+  p:pg a np:Provenance .
 }
 
-:ig {
+p:ig {
   p:
 	dct:title "Nanopublication containing the FAIR principles"@en;
 	dct:rights <http://creativecommons.org/licenses/by/4.0/> ;
@@ -27,12 +27,12 @@
 	dct:contributor <https://ruben.verborgh.org/profile/#me>, <https://orcid.org/0000-0002-1267-0234>, <http://csarven.ca/#i> .
 }
 
-:pg {
-  :ag 
+p:pg {
+  p:ag 
 	prov:wasQuotedFrom <https://www.nature.com/articles/sdata201618> .
 }
 
-:ag {
+p:ag {
  :fair
    dct:title "FAIR principles"@en; 
    a owl:Class;
@@ -78,7 +78,7 @@
 	dct:description "(meta)data are registered or indexed in a searchable resource"@en.
 
    :A
-    dct:title "Accesible"@en;
+    dct:title "Accessible"@en;
 	a :FAIR-Aspect;
 	dct:hasPart :A1, :A2 .
 	
