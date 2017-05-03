@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#> .
+@prefix : <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trig#> .
 @prefix p: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
