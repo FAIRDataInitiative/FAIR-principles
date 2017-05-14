@@ -46,7 +46,7 @@ p:ag {
 	dct:partOf :FAIR;
 	owl:oneOf (:F :A :I :R) .
 
-  ::FAIR-SubPrinciple
+  :FAIR-SubPrinciple
     a owl:Class;
 	rdfs:subClassOf sio:SIO:000137 ; #concept
     dct:title "FAIR SubPrinciple"@en;
@@ -60,22 +60,22 @@ p:ag {
    dct:hasPart :F1, :F2, :F3, :F4 .
     
   :F1 
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "F1"@en;
 	dct:description "(meta)data are assigned a globally unique and persistent identifier"@en.
 	
   :F2 
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "F2"@en;
 	dct:description "data are described with rich metadata (defined by R1 below)"@en.
 	
   :F3
-	a ::FAIR-SubPrinciple;
+	a :FAIR-SubPrinciple;
 	dct:title "F3"@en;
 	dct:description "metadata clearly and explicitly include the identifier of the data it describes"@en.
 	
    :F4
-	a ::FAIR-SubPrinciple;
+	a :FAIR-SubPrinciple;
 	dct:title "F4"@en;
 	dct:description "(meta)data are registered or indexed in a searchable resource"@en.
 
@@ -85,23 +85,23 @@ p:ag {
 	dct:hasPart :A1, :A2 .
 	
    :A1 
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "A1"@en;
 	dct:description "(meta)data are retrievable by their identifier using a standardized communications protocol"@en;
 	dct:hasPart :A1.1, :A1.2 .	
 
 	:A1.1
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "A1.1"@en;
 	dct:description "the protocol is open, free, and universally implementable"@en.
 	
    :A1.2
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "A1.2"@en;
 	dct:description "the protocol allows for an authentication and authorization procedure, where necessary"@en.
 	
    :A2
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "A2"@en;
 	dct:description "metadata are accessible, even when the data are no longer available"@en.
 
@@ -111,17 +111,17 @@ p:ag {
 	dct:hasPart :I1, :I2, :I3 .
 	
 	:I1
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "I1"@en;
 	dct:description "(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation"@en.
 	
 	:I2
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "I2"@en;
 	dct:description "(meta)data use vocabularies that follow FAIR principles"@en.
 	
 	:I3
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "I3"@en;
 	dct:description "(meta)data include qualified references to other (meta)data"@en.
 	
@@ -131,23 +131,23 @@ p:ag {
 	dct:hasPart :R1 .
 	
 	:R1
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "R1"@en;
 	dct:description "meta(data) are richly described with a plurality of accurate and relevant attributes"@en;
 	dct:hasPart :R1.1, :R1.2, :R1.3 .
 	
 	:R1.1
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "R1.1"@en;
 	dct:description "(meta)data are released with a clear and accessible data usage license"@en.
 	
 	:R1.2
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "R1.2"@en;
 	dct:description "(meta)data are associated with detailed provenance"@en . 
 
 	:R1.3
-    a ::FAIR-SubPrinciple;
+    a :FAIR-SubPrinciple;
 	dct:title "R1.3"@en;
 	dct:description "(meta)data meet domain-relevant community standards"@en .	
 }
