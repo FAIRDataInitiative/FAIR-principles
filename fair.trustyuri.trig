@@ -1,5 +1,5 @@
-@prefix this: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np.RApESEB0HjubxdRDPe1D35t1ZuIrYMITgPVMTwc9EzSRQ> .
-@prefix sub: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np.RApESEB0HjubxdRDPe1D35t1ZuIrYMITgPVMTwc9EzSRQ.> .
+@prefix this: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np.RAPHMvRrMi8qe5cEItCKsOoaOm3MnLEkneda8InHBjga0> .
+@prefix sub: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig#np.RAPHMvRrMi8qe5cEItCKsOoaOm3MnLEkneda8InHBjga0.> .
 @prefix : <http://purl.org/fair-ontology#> .
 @prefix thisdoc: <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig> .
 @prefix sio: <http://semanticscience.org/resource/> .
@@ -79,6 +79,7 @@ sub:ag {
 		dct:title "FAIR principles"@en ;
 		a owl:Class ;
 		rdfs:isDefinedBy thisdoc: ;
+		rdfs:seeAlso <https://www.dtls.nl/fair-data/fair-principles-explained/> ;
 		rdfs:subClassOf sio:000090 .
 	
 	:FAIR-Principle dct:description "A FAIR principle describes an essential aspects of FAIR."@en ;

@@ -40,6 +40,7 @@ p:ag {
    dct:title "FAIR principles"@en; 
    a owl:Class;
    rdfs:subClassOf sio:000090; 
+   rdfs:seeAlso <https://www.dtls.nl/fair-data/fair-principles-explained/>;
    rdfs:isDefinedBy <https://raw.githubusercontent.com/FAIRDataInitiative/FAIR-principles/master/fair.trustyuri.trig> ;
    dct:hasPart :F, :A, :I, :R .
 
