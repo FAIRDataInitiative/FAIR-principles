@@ -61,6 +61,12 @@ p:ag {
 	dct:partOf :FAIR;
 	owl:oneOf (:F1 :F2 :F3 :F4 :A1 :A1.1 :A1.2 :A2 :I1 :I2 :I3 :R1 :R1.1 :R1.2 :R1.3) .
 
+  :FAIR-Metric
+    a owl:Class;
+    dct:title "FAIR Metric"@en;
+    dct:description "A FAIR metric is a measure of the FAIRness of a digital resource."@en;
+	rdfs:isDefinedBy :thisdoc .
+	
   :F
    dct:title "Findable"@en;
    a :FAIR-Principle;
